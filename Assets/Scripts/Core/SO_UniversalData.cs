@@ -12,4 +12,6 @@ public class SO_UniversalData : ScriptableObject
 
     public UnityEvent<UserActionEvent.EventCondition> onPlayerAction = new();
     public UnityEvent<UserActionEvent.EventCondition> onPlayerActionFailed = new();
+
+    public UnityEvent onGameOver = new();
 }

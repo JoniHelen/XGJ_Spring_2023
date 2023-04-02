@@ -35,6 +35,7 @@ public class Forge : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1;
         _fire = GetComponent<ForgeFire>();
         _eventWait = new WaitForSeconds(_eventDelay);
         _gameData.onPlayerAction.AddListener(HandleUserAction);
