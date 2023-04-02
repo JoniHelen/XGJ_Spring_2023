@@ -22,6 +22,8 @@ public class MetalBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     Coroutine failRoutine;
 
+    Renderer rend;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         _isDragging = true;
@@ -36,6 +38,7 @@ public class MetalBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     // Start is called before the first frame update
     void Start()
     {
+        rend = GetComponent<Renderer>();
         _startPosition = transform.position;
         _gameData.CurrentEvent.Subscribe(e =>
         {
@@ -99,7 +102,7 @@ public class MetalBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         if (_isHeatingUp)
             _currentHeat = Mathf.Min(_currentHeat + Time.deltaTime, _targetHeat);
         else
-            _currentHeat = Mathf.Max(_currentHeat - Time.deltaTime * 1.5f, 0);
+            _currentHeat = Mathf.Max(_currentHeat - Time.deltaTime * 0.5f, 0);
 
         if (_currentHeat == _targetHeat && _eventActive)
         {
@@ -107,5 +110,7 @@ public class MetalBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHand
             _gameData.onPlayerAction.Invoke(UserActionEvent.EventCondition.reheatMetal);
             StopCoroutine(failRoutine);
         }
+
+        rend.sharedMaterial.SetFloat("_Heat", _currentHeat / _targetHeat);
     }
 }

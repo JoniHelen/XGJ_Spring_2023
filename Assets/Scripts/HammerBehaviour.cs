@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.VFX;
 using UniRx;
 
 public class HammerBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
@@ -11,6 +12,7 @@ public class HammerBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     [SerializeField] private float _minAngle;
     [SerializeField] private float _failTime;
     [SerializeField] private Rigidbody _rb;
+    [SerializeField] private VisualEffect _sparks;
 
     [SerializeField] private SO_UniversalData _gameData;
 
@@ -75,6 +77,7 @@ public class HammerBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         if (Mathf.Abs(_joint.angle) < 0.05f && _hasPassedMinAngle)
         {
             _hasPassedMinAngle = false;
+            _sparks.SendEvent("smith");
 
             if (_eventActive)
             {
