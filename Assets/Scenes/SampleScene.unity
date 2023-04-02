@@ -526,6 +526,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 51654815}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5583cb765dd0f8243ac6684eee8bb5ca,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 51654819}
   m_SourcePrefab: {fileID: 100100000, guid: 5583cb765dd0f8243ac6684eee8bb5ca, type: 3}
 --- !u!1 &51654807 stripped
 GameObject:
@@ -546,6 +550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vfx: {fileID: 714928923}
+  _data: {fileID: 11400000, guid: 1a4fc925b7f238b48b06291ed733d1e1, type: 2}
 --- !u!114 &51654809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,6 +700,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &51654819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51654807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb219b23cdf4b314f94a27bca3cc8012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &59379216
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9205,10 +9222,10 @@ VisualEffect:
       - m_Value: 3
         m_Name: FlameLife
         m_Overridden: 1
-      - m_Value: 0.24
+      - m_Value: 0.01
         m_Name: ParticleAttraction
         m_Overridden: 1
-      - m_Value: 0.06
+      - m_Value: 0.05
         m_Name: HeatStrength
         m_Overridden: 1
       - m_Value: 1
@@ -9254,7 +9271,10 @@ VisualEffect:
     m_NamedObject:
       m_Array: []
     m_Bool:
-      m_Array: []
+      m_Array:
+      - m_Value: 0
+        m_Name: PortalIsActive
+        m_Overridden: 1
 --- !u!4 &714928924
 Transform:
   m_ObjectHideFlags: 0

@@ -8,6 +8,14 @@ using UniRx;
 public class UpdateVisualEffect : MonoBehaviour
 {
     [SerializeField] private VisualEffect vfx;
+    [SerializeField] private SO_UniversalData _data;
+
+    private void Start()
+    {
+        _data.CurrentEvent.Subscribe(e => {
+            vfx.SetBool("PortalIsActive", e == UserActionEvent.EventCondition.saveTheHeart);
+        }).AddTo(this);
+    }
 
     private void Update()
     {
