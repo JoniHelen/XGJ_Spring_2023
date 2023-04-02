@@ -11,4 +11,5 @@ public class SO_UniversalData : ScriptableObject
     public ReactiveProperty<UserActionEvent.EventCondition> CurrentEvent = new(UserActionEvent.EventCondition.none);
 
     public UnityEvent<UserActionEvent.EventCondition> onPlayerAction = new();
+    public UnityEvent<UserActionEvent.EventCondition> onPlayerActionFailed = new();
 }

@@ -12,7 +12,7 @@ public class UIHandler : MonoBehaviour
 
     private void Awake()
     {
-        _gameData.FireStrength.Subscribe(s => _fireText.text = s.ToString());
-        _gameData.CurrentEvent.Subscribe(e => _taskText.text = UserActionEvent.EventName(e));
+        _gameData.FireStrength.Subscribe(s => _fireText.text = s.ToString()).AddTo(this);
+        _gameData.CurrentEvent.Subscribe(e => _taskText.text = UserActionEvent.EventName(e)).AddTo(this);
     }
 }
