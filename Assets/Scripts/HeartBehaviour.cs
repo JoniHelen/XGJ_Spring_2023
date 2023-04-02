@@ -58,7 +58,7 @@ public class HeartBehaviour : MonoBehaviour, IPointerClickHandler
             if (_progress == 0)
             {
                 _needsSaving = false;
-                _gameData.onPlayerActionFailed.Invoke(UserActionEvent.EventCondition.saveTheHeart);
+                _gameData.onGameOver.Invoke();
             }
             transform.position = Vector3.Lerp(_endPosition, _startPosition, _progress / 100);
         }
