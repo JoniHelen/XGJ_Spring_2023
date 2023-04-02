@@ -45,7 +45,7 @@ public class RopeBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
             {
                 failRoutine = StartCoroutine(FailTimer());
             }
-        });
+        }).AddTo(this);
     }
 
     private IEnumerator FailTimer()

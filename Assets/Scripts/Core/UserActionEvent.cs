@@ -29,7 +29,7 @@ public class UserActionEvent
 
     public static string EventName(EventCondition condition) => condition switch
     {
-        EventCondition.none => "None",
+        EventCondition.none => "",
         EventCondition.moreAir => "Pull the Rope",
         EventCondition.addCoal => "Add Coal to Fire",
         EventCondition.useHammer => "Use the Hammer",
