@@ -13,11 +13,12 @@ public class CoalBoxBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     [SerializeField] private SO_UniversalData _gameData;
     [SerializeField] private float _failTime;
     [SerializeField] private CoalBall _coalPrefab;
+    [SerializeField] private AudioSource _audioSource;
 
     private CoalBall _coalBall;
 
     private bool _isDragging = false;
-    private bool _eventActive = false;
+    public bool _eventActive = false;
 
     private Rigidbody _coalRb;
 
@@ -29,6 +30,7 @@ public class CoalBoxBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         _coalBall = Instantiate(_coalPrefab, transform.position, Quaternion.Euler(-90, 0, 0));
         _coalRb = _coalBall.GetComponent<Rigidbody>();
         _coalBall._box = this;
+        _audioSource.PlayOneShot(_audioSource.clip);
     }
 
     public void OnPointerUp(PointerEventData eventData)

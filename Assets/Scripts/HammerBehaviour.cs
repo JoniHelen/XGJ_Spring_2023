@@ -13,6 +13,7 @@ public class HammerBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     [SerializeField] private float _failTime;
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private VisualEffect _sparks;
+    [SerializeField] private AudioSource _audioSource;
 
     [SerializeField] private SO_UniversalData _gameData;
 
@@ -78,6 +79,7 @@ public class HammerBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             _hasPassedMinAngle = false;
             _sparks.SendEvent("smith");
+            _audioSource.PlayOneShot(_audioSource.clip);
 
             if (_eventActive)
             {

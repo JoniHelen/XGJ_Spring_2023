@@ -117,6 +117,6 @@ public class Forge : MonoBehaviour
     void Update()
     {
         _gameData.FireStrength.Value = _fire.FireStrength;
-        _fireEffect.SetFloat("EffectIntensity", _fire.FireStrength / 100);
+        _fireEffect.SetFloat("EffectIntensity", Mathf.Sqrt(_fire.FireStrength / 100));
     }
 }

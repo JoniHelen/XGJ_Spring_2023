@@ -14,6 +14,8 @@ public class RopeBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     private bool _ropePulled = false;
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private SO_UniversalData _gameData;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioSource _audioSource2;
     [SerializeField] private float _failTime;
 
     Coroutine failRoutine;
@@ -22,6 +24,7 @@ public class RopeBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     {
         _isDragging = true;
         _rb.isKinematic = true;
+        _audioSource.Play();
         _dragStartPosition = eventData.pointerPressRaycast.worldPosition;
         _dragRbStartPosition = _rb.position;
     }
@@ -30,6 +33,7 @@ public class RopeBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     {
         _isDragging = false;
         _rb.isKinematic = false;
+        _audioSource.Stop();
         _ropePulled = false;
     }
 
@@ -62,7 +66,9 @@ public class RopeBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
                     if ((_dragStartPosition.y - hit.point.y) >= _maxDragDistance && !_ropePulled)
                     {
                         _gameData.onPlayerAction.Invoke(UserActionEvent.EventCondition.moreAir);
-                        StopCoroutine(failRoutine);
+                        if(failRoutine != null)
+                            StopCoroutine(failRoutine);
+                        _audioSource2.PlayOneShot(_audioSource2.clip);
                         _ropePulled = true;
                     }
 

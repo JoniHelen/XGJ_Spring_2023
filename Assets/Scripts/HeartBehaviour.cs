@@ -9,6 +9,7 @@ public class HeartBehaviour : MonoBehaviour, IPointerClickHandler
     [SerializeField] private SO_UniversalData _gameData;
     [SerializeField] private float _progressDrain;
     [SerializeField] private float _progressGain;
+    [SerializeField] private AudioSource _audioSource;
     private float _progress = 100;
     private Vector3 _startPosition;
     private Vector3 _endPosition;
@@ -19,6 +20,8 @@ public class HeartBehaviour : MonoBehaviour, IPointerClickHandler
         if (_needsSaving)
         {
             _progress = Mathf.Min(_progress + _progressGain, 100);
+
+            _audioSource.PlayOneShot(_audioSource.clip);
 
             if (_progress == 100)
             {
@@ -33,7 +36,7 @@ public class HeartBehaviour : MonoBehaviour, IPointerClickHandler
     void Start()
     {
         _startPosition = transform.position;
-        _endPosition = _startPosition + Vector3.left * 7f;
+        _endPosition = _startPosition + Vector3.left * 9f;
 
         _gameData.CurrentEvent.Subscribe(e =>
         {

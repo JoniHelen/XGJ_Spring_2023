@@ -30,11 +30,11 @@ public class UserActionEvent
     public static string EventName(EventCondition condition) => condition switch
     {
         EventCondition.none => "None",
-        EventCondition.moreAir => "More Air",
-        EventCondition.addCoal => "Add Coal",
+        EventCondition.moreAir => "Pull the Rope",
+        EventCondition.addCoal => "Add Coal to Fire",
         EventCondition.useHammer => "Use the Hammer",
         EventCondition.reheatMetal => "Reheat the Metal",
-        EventCondition.useGlitter => "Use the Glitter",
+        EventCondition.useGlitter => "Sprinkle the Glitter",
         EventCondition.saveTheHeart => "Save the Heart",
         _ => ""
     };

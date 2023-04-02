@@ -31,6 +31,7 @@ public class CoalSpawner : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(CoalSpawner))]
 public class CoalSpawnerEditor : Editor
 {
@@ -49,3 +50,4 @@ public class CoalSpawnerEditor : Editor
         }
     }
 }
+#endif

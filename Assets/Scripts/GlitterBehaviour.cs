@@ -15,6 +15,7 @@ public class GlitterBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     [SerializeField] private float _rotationTime;
     [SerializeField] private VisualEffect _glitter;
     [SerializeField] private SO_UniversalData _gameData;
+    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private float _failTime;
 
     private bool _isDragging = false;
@@ -111,17 +112,21 @@ public class GlitterBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("ForgeShaker") && _eventActive)
+        if (other.gameObject.CompareTag("ForgeShaker"))
         {
-            //_glitter.Stop();
             _glitter.SendEvent("burst");
-            _glitterCount++;
+            _audioSource.PlayOneShot(_audioSource.clip);
 
-            if (_glitterCount == 2)
+            if (_eventActive)
             {
-                _gameData.onPlayerAction.Invoke(UserActionEvent.EventCondition.useGlitter);
-                _eventActive = false;
-                StopCoroutine(failRoutine);
+                _glitterCount++;
+
+                if (_glitterCount == 2)
+                {
+                    _gameData.onPlayerAction.Invoke(UserActionEvent.EventCondition.useGlitter);
+                    _eventActive = false;
+                    StopCoroutine(failRoutine);
+                }
             }
         }
     }

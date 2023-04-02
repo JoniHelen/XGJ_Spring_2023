@@ -95,6 +95,9 @@
         },
         {
             "m_Id": "1ab770a569664007836f8f653356c291"
+        },
+        {
+            "m_Id": "7d22d4e362b84528a7310d15ef75642e"
         }
     ],
     "m_GroupDatas": [],
@@ -196,6 +199,20 @@
                     "m_Id": "df321f32b92447d39331f99ae0a98955"
                 },
                 "m_SlotId": -1430609685
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "7d22d4e362b84528a7310d15ef75642e"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "df321f32b92447d39331f99ae0a98955"
+                },
+                "m_SlotId": 808681483
             }
         },
         {
@@ -611,7 +628,7 @@
     "m_SlotType": 0,
     "m_Hidden": false,
     "m_ShaderOutputName": "_HeartIntensity",
-    "m_StageCapability": 3,
+    "m_StageCapability": 2,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
@@ -958,6 +975,19 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
+    "m_ObjectId": "62c99f6be53a4f51a6a776f727799e5c",
+    "m_Id": 0,
+    "m_DisplayName": "Normal",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_BareResource": false
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "675d3723ef774bde9b6a47557b9c45d9",
     "m_Id": 0,
@@ -1028,7 +1058,7 @@
         "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
         "m_Guid": ""
     },
-    "m_DefaultType": 0
+    "m_DefaultType": 3
 }
 
 {
@@ -1190,6 +1220,42 @@
     },
     "m_Property": {
         "m_Id": "f624cae09ba84d09bce65c09ebd28663"
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "7d22d4e362b84528a7310d15ef75642e",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -836.0,
+            "y": 957.0,
+            "width": 121.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "62c99f6be53a4f51a6a776f727799e5c"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "53b46c45fc12416f93e9b2f245f7139e"
     }
 }
 
@@ -1439,7 +1505,7 @@
     },
     "m_Name": "Sample Texture 2D",
     "m_DrawState": {
-        "m_Expanded": true,
+        "m_Expanded": false,
         "m_Position": {
             "serializedVersion": "2",
             "x": -649.0000610351563,
@@ -1484,7 +1550,7 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_TextureType": 0,
+    "m_TextureType": 1,
     "m_NormalMapSpace": 0,
     "m_EnableGlobalMipBias": true,
     "m_MipSamplingMode": 0
@@ -1634,6 +1700,24 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Texture2DInputMaterialSlot",
+    "m_ObjectId": "b857dc92a1f2441daaf0f86c6e26a284",
+    "m_Id": 808681483,
+    "m_DisplayName": "Normal",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Normal",
+    "m_StageCapability": 2,
+    "m_BareResource": false,
+    "m_Texture": {
+        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_Guid": ""
+    },
+    "m_DefaultType": 0
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "b898641767464e7c8c0b02ab996c55b4",
     "m_Id": -1430609685,
@@ -1641,7 +1725,7 @@
     "m_SlotType": 0,
     "m_Hidden": false,
     "m_ShaderOutputName": "_HeartPosition",
-    "m_StageCapability": 3,
+    "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
         "y": 0.0,
@@ -1797,7 +1881,7 @@
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "HeatColor",
-    "m_StageCapability": 3,
+    "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
         "y": 0.0,
@@ -1867,6 +1951,9 @@
             "m_Id": "29f4b981c6894ccca2b048e36161807b"
         },
         {
+            "m_Id": "b857dc92a1f2441daaf0f86c6e26a284"
+        },
+        {
             "m_Id": "d230e39d4eb24a379aaf0b6dfcd94b74"
         }
     ],
@@ -1882,12 +1969,14 @@
     "m_PropertyGuids": [
         "0dd0ab0d-64f7-47ec-9b7d-242a8a12a2ca",
         "85f868ef-f29e-4981-acdd-c579fe26715b",
-        "1fbcca36-a859-4ea6-9d25-45be78b03f5e"
+        "1fbcca36-a859-4ea6-9d25-45be78b03f5e",
+        "d191f374-acb8-4041-8c9a-4e094b45ada8"
     ],
     "m_PropertyIds": [
         -1430609685,
         -288530141,
-        -1319045238
+        -1319045238,
+        808681483
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
@@ -1902,7 +1991,7 @@
     "m_SlotType": 0,
     "m_Hidden": false,
     "m_ShaderOutputName": "_HeartPower",
-    "m_StageCapability": 3,
+    "m_StageCapability": 2,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []

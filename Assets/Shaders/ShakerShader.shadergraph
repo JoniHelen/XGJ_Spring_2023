@@ -611,7 +611,7 @@
     "m_SlotType": 0,
     "m_Hidden": false,
     "m_ShaderOutputName": "_HeartIntensity",
-    "m_StageCapability": 3,
+    "m_StageCapability": 2,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
@@ -1614,6 +1614,24 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Texture2DInputMaterialSlot",
+    "m_ObjectId": "b1421913f738450fab7849df030df139",
+    "m_Id": 808681483,
+    "m_DisplayName": "Normal",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Normal",
+    "m_StageCapability": 2,
+    "m_BareResource": false,
+    "m_Texture": {
+        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_Guid": ""
+    },
+    "m_DefaultType": 0
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "b4a294931651476c925cfa7075f32287",
     "m_Name": "",
@@ -1663,7 +1681,7 @@
     "m_SlotType": 0,
     "m_Hidden": false,
     "m_ShaderOutputName": "_HeartPosition",
-    "m_StageCapability": 3,
+    "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
         "y": 0.0,
@@ -1897,7 +1915,7 @@
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "HeatColor",
-    "m_StageCapability": 3,
+    "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
         "y": 0.0,
@@ -2003,6 +2021,9 @@
             "m_Id": "29f4b981c6894ccca2b048e36161807b"
         },
         {
+            "m_Id": "b1421913f738450fab7849df030df139"
+        },
+        {
             "m_Id": "d230e39d4eb24a379aaf0b6dfcd94b74"
         }
     ],
@@ -2018,12 +2039,14 @@
     "m_PropertyGuids": [
         "0dd0ab0d-64f7-47ec-9b7d-242a8a12a2ca",
         "85f868ef-f29e-4981-acdd-c579fe26715b",
-        "1fbcca36-a859-4ea6-9d25-45be78b03f5e"
+        "1fbcca36-a859-4ea6-9d25-45be78b03f5e",
+        "d191f374-acb8-4041-8c9a-4e094b45ada8"
     ],
     "m_PropertyIds": [
         -1430609685,
         -288530141,
-        -1319045238
+        -1319045238,
+        808681483
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
@@ -2038,7 +2061,7 @@
     "m_SlotType": 0,
     "m_Hidden": false,
     "m_ShaderOutputName": "_HeartPower",
-    "m_StageCapability": 3,
+    "m_StageCapability": 2,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []

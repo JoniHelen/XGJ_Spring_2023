@@ -194,7 +194,7 @@ MonoBehaviour:
     x: -1610
     y: -1009
     width: 5393
-    height: 5869
+    height: 5888
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,7 +305,7 @@ VisualEffectResource:
     m_UpdateMode: 0
     m_PreWarmDeltaTime: 0.05
     m_PreWarmStepCount: 0
-    m_InitialEventName: OnPlay
+    m_InitialEventName: none
     m_InstancingMode: -1
     m_InstancingCapacity: 64
 --- !u!114 &8926484042661614666
@@ -1756,7 +1756,7 @@ MonoBehaviour:
   useAlphaClipping: 0
   generateMotionVector: 0
   excludeFromTAA: 0
-  sortingPriority: 0
+  sortingPriority: 10
   m_SubOutputs:
   - {fileID: 8926484042661615894}
   colorMapping: 0
@@ -2945,7 +2945,7 @@ MonoBehaviour:
   useAlphaClipping: 0
   generateMotionVector: 0
   excludeFromTAA: 0
-  sortingPriority: 0
+  sortingPriority: 10
   m_SubOutputs:
   - {fileID: 8926484042661615946}
   colorMapping: 0
@@ -7438,7 +7438,7 @@ MonoBehaviour:
   useAlphaClipping: 0
   generateMotionVector: 0
   excludeFromTAA: 0
-  sortingPriority: 0
+  sortingPriority: 10
   m_SubOutputs:
   - {fileID: 8926484042661616085}
   colorMapping: 0
@@ -9404,7 +9404,7 @@ MonoBehaviour:
   useAlphaClipping: 0
   generateMotionVector: 0
   excludeFromTAA: 0
-  sortingPriority: 0
+  sortingPriority: 10
   m_SubOutputs:
   - {fileID: 8926484042661616178}
   colorMapping: 0
@@ -10250,7 +10250,7 @@ MonoBehaviour:
   useAlphaClipping: 0
   generateMotionVector: 0
   excludeFromTAA: 0
-  sortingPriority: 0
+  sortingPriority: 10
   m_SubOutputs:
   - {fileID: 8926484042661616223}
   colorMapping: 0
@@ -15014,7 +15014,7 @@ MonoBehaviour:
   useAlphaClipping: 0
   generateMotionVector: 0
   excludeFromTAA: 0
-  sortingPriority: 0
+  sortingPriority: 10
   m_SubOutputs:
   - {fileID: 8926484042661616613}
   colorMapping: 0

@@ -8,7 +8,12 @@ public class CoalBall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("ForgeCoal"))
+        if (other.gameObject.CompareTag("ForgeCoal") && _box._eventActive)
+        {
+            var a = other.GetComponent<AudioSource>();
+            a.PlayOneShot(a.clip);
             _box.CompleteTask();
+        }
+            
     }
 }
